@@ -10,9 +10,7 @@
         class="d-flex align-center top_toolbar-container"
         >
 
-
-
-        <v-toolbar-title>WhitEXchangers</v-toolbar-title>
+        <div class="logo" ><a href="/"><img style="width:100px" :src="logo"/></a></div>
 
         <v-tabs
           align-with-title
@@ -46,8 +44,13 @@
 </template>
 
 <script>
+import LogoImg from "@/assets/img/logo.png";
 export default {
+  name: "TopNavbar",
+  data: () => ({
+    logo: LogoImg,
+  }),
+};
 
-}
 
 </script>
