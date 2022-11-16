@@ -7,14 +7,14 @@
     >
       <v-container
         fluid
-        class="d-flex align-center top_toolbar-container"
+        class="d-flex align-right top_toolbar-container"
         >
 
-        <div class="logo" ><a href="/"><img style="width:100px" :src="logo"/></a></div>
-
+        <div class="logo" style="width:450px"><a href="/"><img style="width:100px" :src="logo"/></a></div>
         <v-tabs
           align-with-title
           height="80px"
+          class="top_toolbar-tabs"
         >
           <v-tab><router-link to="/">Home</router-link></v-tab>
           <v-tab><router-link to="/news/">News</router-link></v-tab>
@@ -23,19 +23,23 @@
           <v-tab><router-link to="/faq/">F.A.Q</router-link></v-tab>
           <v-tab><router-link to="/contacts/">Contacts</router-link></v-tab>
         </v-tabs>
-        <v-btn
-          variant="outlined"
-          color="primary"
-          class="ml-10"
-        >
-          Login
-        </v-btn>
+
+
         <v-btn
           variant="outlined"
           color="green"
           class="ml-3"
         >
           Create account
+        </v-btn>
+
+        <v-btn
+            variant="outlined"
+            color="primary"
+            class="ml-5"
+
+        >
+          Login
         </v-btn>
       </v-container>
 
