@@ -1,23 +1,28 @@
 <template>
   <v-app>
     <v-main>
-      <MainPage/>
+      <topnavbar />
+      <v-container fluid>
+        <router-view />
+      </v-container>
+      <bottomnavbar />
     </v-main>
   </v-app>
 </template>
 
 <script>
-import MainPage from './pages/MainPage.vue'
+import TopNavbar from '@/components/TopNavbar'
+import BottomNavbar from "@/components/BottomNavbar";
 
 export default {
   name: 'App',
-
   components: {
-    MainPage,
-  },
-
-  data: () => ({
-    //
-  }),
+    topnavbar: TopNavbar,
+    bottomnavbar: BottomNavbar
+  }
 }
 </script>
+<style>
+@import './assets/css/style.css';
+</style>
+
