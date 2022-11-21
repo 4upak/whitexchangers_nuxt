@@ -107,7 +107,18 @@ header .v-tabs{
 
     background-color: rgb(247, 250, 252);;
 }
-tr:hover{
-    background-color: #d4edda;
-    cursor: pointer;
+
+.leftbar .v-list-item-title{
+    font-size:14px
+}
+.change_click_button .v-btn__content{
+    font-size:8px
+}
+.change_click_button{
+    opacity: 0.6;
+    margin-top:5px;
+    margin-bottom:5px
+}
+#rates_table span{
+    font-size:9px
 }

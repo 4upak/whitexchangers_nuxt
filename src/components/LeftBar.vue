@@ -51,7 +51,7 @@
             <v-col :cols="cols_num" :md="md" >
 
                 <v-card-title id="from-list">
-                  From currency
+                  Give
                 </v-card-title>
                 <from-list />
 
@@ -59,7 +59,7 @@
             <v-col :cols="cols_num" :md="md" >
 
                 <v-card-title id="to-list">
-                  To currency
+                  Get
                 </v-card-title>
                 <to-list />
 
@@ -72,13 +72,13 @@
             class="mt-5">
             <v-col :cols="cols_num" :md="md">
               <v-card-title>
-                From currency
+                Give
               </v-card-title>
               <two-from-list />
             </v-col>
             <v-col :cols="cols_num" :md="md">
               <v-card-title>
-                From currency
+                Get
               </v-card-title>
               <two-to-list />
             </v-col>

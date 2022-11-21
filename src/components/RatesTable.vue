@@ -4,7 +4,7 @@
     <thead>
     <tr>
       <th class="text-left">
-        Exchanger
+        Unit
       </th>
       <th class="text-left">
         Give
@@ -20,12 +20,25 @@
       :key="item.id"
     >
       <td>{{ item.exchange.name }}</td>
-      <td>{{ item.from_rate}} <span class="from_currency">{{item.from_currency.name}}</span><br>
+      <td>{{ item.from_rate}} <br><span class="from_currency">{{item.from_currency.name}}</span><br>
         <span class="min"><b>Min:</b> {{item.min}}</span><br>
         <span class="max"><b>Max:</b> {{item.max}}</span>
       </td>
-      <td>{{ item.to_rate}} <span class="to_currency">{{item.to_currency.name}}</span>
-        <span class="min">{{ item.reserve}}</span>
+      <td>
+        {{ item.to_rate}} <br><span class="to_currency">{{item.to_currency.name}}</span>
+        <br>
+        <span class="min"><b>Reserve:</b>{{ item.reserve}}</span>
+        <br>
+        <v-btn
+            color="white"
+            prepend-icon="mdi-cloud-upload"
+            width="120"
+            height="20"
+            class="change_click_button"
+        >
+          Make exchange
+        </v-btn>
+
       </td>
     </tr>
     </tbody>
