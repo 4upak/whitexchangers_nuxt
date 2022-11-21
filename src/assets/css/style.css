@@ -93,7 +93,7 @@ header .v-tabs{
     border:solid 1px #000
 }
 .v-overlay__content .v-list{
-    width: 600px;
+    width: 250px;
     min-height: 800px;
 }
 .v-overlay__content .v-list a:link, .v-overlay__content .v-list a:visited{
