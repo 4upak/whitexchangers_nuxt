@@ -11,7 +11,8 @@
       height="60px"
       class="leftbar"
     >
-      <v-tab value="one">
+      <v-tab value="one" cols="12" md="4"
+      >
         <v-icon
           size="large"
           color="blue"
@@ -21,7 +22,7 @@
         </v-icon>
         List
       </v-tab>
-      <v-tab value="two">
+      <v-tab value="two" cols="12" md="4">
         <v-icon
           size="large"
           color="blue"
@@ -31,7 +32,7 @@
         </v-icon>
         Search
       </v-tab>
-      <v-tab value="three">
+      <v-tab value="three" cols="12" md="4">
         <v-icon
           size="large"
           color="blue"

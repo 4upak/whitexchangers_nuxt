@@ -33,10 +33,10 @@
             color="white"
             prepend-icon="mdi-cloud-upload"
             width="120"
-            height="20"
+            height="30"
             class="change_click_button"
         >
-          Make exchange
+          Exchange
         </v-btn>
 
       </td>

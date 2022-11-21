@@ -1,7 +1,7 @@
 <template >
 
   <v-text-field
-    label="Type to currency"
+    label="Get currency"
     v-model="ToSearchItem"
     @input="searchTo"
     id="to-list"

@@ -1,6 +1,6 @@
 <template>
   <v-text-field
-    label="Type from currency"
+    label="Give currency"
     v-model="FromSearchItem"
     @input="searchFrom"
     id="from-list"
