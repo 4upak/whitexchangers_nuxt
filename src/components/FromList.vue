@@ -14,11 +14,15 @@
         :key="i"
         v-if="getCurrenciesFromLists.length > 0 && item.active == true"
     >
+
+
+
       <v-card-title
           class="tag_title"
       >
         {{ item.name }}
       </v-card-title>
+
       <v-list
           density="compact"
       >
@@ -30,11 +34,11 @@
             @click="this.setFromCode(currency.code_name); scrollTo()"
             v-if = "currency.active == true"
 
+            :class="{ 'v-list-item--active': currency.code_name == fromSelectedItem }"
+
           >
-            <v-list-item-title v-text="currency.name"
-
-            >
-
+            <v-list-item-title>
+              {{ currency.name }}
             </v-list-item-title>
 
           </v-list-item>
