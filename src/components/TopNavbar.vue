@@ -69,21 +69,27 @@
                 <v-list-item>
                   <v-list-item-title><router-link to="/">Home</router-link></v-list-item-title>
                 </v-list-item>
+                <v-divider></v-divider>
                 <v-list-item>
                   <v-list-item-title><router-link to="/news/">News</router-link></v-list-item-title>
                 </v-list-item>
+                <v-divider></v-divider>
                 <v-list-item>
                   <v-list-item-title><router-link to="/exchanges/">Exchanges</router-link></v-list-item-title>
                 </v-list-item>
+                <v-divider></v-divider>
                 <v-list-item>
                   <v-list-item-title><router-link to="/articles/">Articles</router-link></v-list-item-title>
                 </v-list-item>
+                <v-divider></v-divider>
                 <v-list-item>
                   <v-list-item-title><router-link to="/faq/">F.A.Q</router-link></v-list-item-title>
                 </v-list-item>
+                <v-divider></v-divider>
                 <v-list-item>
                   <v-list-item-title><router-link to="/contacts/">Contacts</router-link></v-list-item-title>
                 </v-list-item>
+                <v-divider></v-divider>
 
               </v-list>
             </v-menu>

@@ -94,17 +94,20 @@ header .v-tabs{
 }
 .v-overlay__content .v-list{
     width: 250px;
-    min-height: 800px;
+    min-height: 500px;
 }
 .v-overlay__content .v-list a:link, .v-overlay__content .v-list a:visited{
-    font-size: 25px;
+    font-size: 20px;
 }
 .v-overlay__content .v-list .v-list-item{
-    height: 50px;
-    margin: 20px;
-    border-bottom: #72819f solid 1px;
+    height: 40px;
+    margin: 10px;
 }
 .tag_title{
 
     background-color: rgb(247, 250, 252);;
+}
+tr:hover{
+    background-color: #d4edda;
+    cursor: pointer;
 }

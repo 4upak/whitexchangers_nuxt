@@ -1,7 +1,7 @@
 <template
-    class="leftbar"
->
 
+>
+<div class="leftbar">
   <v-card
 
   >
@@ -92,7 +92,7 @@
     </v-card-text>
   </v-card>
 
-
+</div>
 </template>
 
 <script>

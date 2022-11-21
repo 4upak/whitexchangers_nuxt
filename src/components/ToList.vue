@@ -11,7 +11,7 @@
   <template
     v-for="(item, i) in getCurrenciesToLists"
   >
-    <v-card
+    <div
       :key="i"
       v-if="getCurrenciesToLists.length > 0 && item.active == true"
     >
@@ -37,7 +37,7 @@
         </template>
       </v-list>
 
-    </v-card>
+    </div>
   </template>
 
 
