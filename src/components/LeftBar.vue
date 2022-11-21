@@ -15,7 +15,7 @@
         >
           mdi-format-list-text
         </v-icon>
-        Table
+        List
       </v-tab>
       <v-tab value="two">
         <v-icon
@@ -25,7 +25,8 @@
         >
           mdi-text-search
         </v-icon>
-        List</v-tab>
+        Search
+      </v-tab>
       <v-tab value="three">
         <v-icon
           size="large"
@@ -43,11 +44,29 @@
         <v-window-item value="one">
           <v-row
             class="mt-5">
-            <v-col cols="12" md="6">
-              <from-list />
+            <v-col cols="12" md="6" >
+              <v-card
+                class="mx-auto"
+                max-width="400"
+                outlined
+              >
+                <v-card-title id="from-list">
+                  From currency
+                </v-card-title>
+                <from-list />
+              </v-card>
             </v-col>
-            <v-col cols="12" md="6">
-              <to-list />
+            <v-col cols="12" md="6" >
+              <v-card
+                  class="mx-auto"
+                  max-width="400"
+                  outlined
+              >
+                <v-card-title id="to-list">
+                  To currency
+                </v-card-title>
+                <to-list />
+              </v-card>
             </v-col>
           </v-row>
         </v-window-item>
@@ -56,9 +75,15 @@
           <v-row
             class="mt-5">
             <v-col cols="12" md="6">
+              <v-card-title>
+                From currency
+              </v-card-title>
               <two-from-list />
             </v-col>
             <v-col cols="12" md="6">
+              <v-card-title>
+                From currency
+              </v-card-title>
               <two-to-list />
             </v-col>
           </v-row>
@@ -92,8 +117,25 @@ export default {
 
   },
   data: () => ({
-    tab: null,
+    tab: 'one',
   }),
+  mounted() {
+    this.$store.dispatch('fetchCurrenciesLists')
+    this.changeTab()
+  },
+  methods: {
+    isMobile() {
+      if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        return true
+      } else {
+        return false
+      }
+    },
+    changeTab() {
+      if(this.isMobile())
+        this.tab = 'two'
+    }
+  }
 }
 </script>
 

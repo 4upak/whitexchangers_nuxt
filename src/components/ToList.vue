@@ -1,10 +1,10 @@
-<template>
+<template >
 
   <v-text-field
-    label="To currency"
+    label="Type to currency"
     v-model="ToSearchItem"
     @input="searchTo"
-
+    id="to-list"
   >
 
   </v-text-field>
@@ -15,16 +15,21 @@
       :key="i"
       v-if="getCurrenciesToLists.length > 0 && item.active == true"
     >
-      <v-card-title>
+      <v-card-title
+        class="tag_title"
+      >
         {{ item.name }}
       </v-card-title>
-      <v-list density="compact">
+      <v-list
+          density="compact"
+
+      >
         <template v-for="(currency, j) in item.tag_currencies">
           <v-list-item
             :key="j"
             :value="currency"
             active-color="primary"
-            @click="this.setToCode(currency.code_name)"
+            @click="this.setToCode(currency.code_name); scrollTo()"
             v-if = "currency.active == true"
           >
             <v-list-item-title v-text="currency.name"></v-list-item-title>
@@ -55,6 +60,9 @@ export default {
     ...mapActions(["setToCode"]),
     searchTo() {
       this.$store.dispatch("searchTo", this.ToSearchItem);
+    },
+    scrollTo() {
+      document.getElementById("from-list").scrollIntoView( { behavior: "smooth" } );
     },
   },
 

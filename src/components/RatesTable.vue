@@ -1,7 +1,6 @@
 <template>
 
-
-  <v-table v-if="getRatesResult.length > 0">
+  <v-table v-if="getRatesResult.length > 0" id="rates_table">
     <thead>
     <tr>
       <th class="text-left">

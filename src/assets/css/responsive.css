@@ -16,6 +16,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
     }
     .leftbar button{
         max-width: 105px;
+        font-size: 13px;
     }
     .leftbar{
         boder:solid 1px #000;
