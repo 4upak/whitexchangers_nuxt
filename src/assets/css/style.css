@@ -42,3 +42,65 @@ a:hover{
     margin-bottom:50px;
 
 }
+html, body{
+    margin:0px;
+    padding:0px;
+    width: 100%;
+}
+body{
+    font-size: 15px;
+    color: #282e38;
+
+}
+#app{
+    width:100%
+}
+header .v-container{
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 500;
+    font-size: 15px;
+    padding:0px;
+    height: 80px;
+}
+header .logo{
+    width: 100px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin:10px;
+    float:left;
+}
+header .login_button, header .register_button{
+    float: left;
+
+
+}
+header .v-tabs{
+    float: right !important;
+    margin-right: 20px;
+}
+.header_buttons{
+    float: right;
+    margin-right: 20px;
+}
+.hamburder{
+    width:250px;float:left;
+    border:solid 1px #000
+}
+.v-overlay__content .v-list{
+    width: 600px;
+    min-height: 800px;
+}
+.v-overlay__content .v-list a:link, .v-overlay__content .v-list a:visited{
+    font-size: 25px;
+}
+.v-overlay__content .v-list .v-list-item{
+    height: 50px;
+    margin: 20px;
+    border-bottom: #72819f solid 1px;
+}

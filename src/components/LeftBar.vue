@@ -9,26 +9,26 @@
       <v-tab value="one">
         <v-icon
           size="large"
-          color="grey"
+          color="blue"
           class="mx-2"
         >
-          mdi-view-quilt
+          mdi-format-list-text
         </v-icon>
         Table
       </v-tab>
       <v-tab value="two">
         <v-icon
           size="large"
-          color="grey"
+          color="blue"
           class="mx-2"
         >
-          mdi-view-list
+          mdi-text-search
         </v-icon>
         List</v-tab>
       <v-tab value="three">
         <v-icon
           size="large"
-          color="grey"
+          color="blue"
           class="mx-2"
         >
           mdi-thumb-up

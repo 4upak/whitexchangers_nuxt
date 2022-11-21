@@ -10,7 +10,10 @@
         class="d-flex align-right top_toolbar-container"
         >
 
-        <div class="logo" style="width:450px"><a href="/"><img style="width:100px" :src="logo"/></a></div>
+        <div
+             class="logo"
+        ><a href="/"><img style="width:100px" :src="logo"/></a></div>
+
         <v-tabs
           align-with-title
           height="80px"
@@ -25,22 +28,70 @@
         </v-tabs>
 
 
-        <v-btn
-          variant="outlined"
-          color="green"
-          class="ml-3"
-        >
-          Create account
-        </v-btn>
+        <div class="header_buttons">
+          <v-btn
+              variant="outlined"
+              color="blue"
+              class="ml-3 register_button"
 
-        <v-btn
-            variant="outlined"
-            color="primary"
-            class="ml-5"
+          >
+            Create account
+          </v-btn>
+          <v-btn
+              variant="outlined"
+              color="grey"
+              class="ml-5 login_button"
 
-        >
-          Login
-        </v-btn>
+          >
+            Login
+          </v-btn>
+
+            <v-menu
+                transition="slide-y-transition"
+            >
+
+              <template v-slot:activator="{ props }">
+                <v-btn
+                    icon
+                    v-bind="props"
+                >
+                  <v-icon
+                      color="blue"
+                      icon="mdi-hamburger"
+                      size="x-large"
+
+                  >
+
+                  </v-icon>
+                </v-btn>
+              </template>
+              <v-list>
+                <v-list-item>
+                  <v-list-item-title><router-link to="/">Home</router-link></v-list-item-title>
+                </v-list-item>
+                <v-list-item>
+                  <v-list-item-title><router-link to="/news/">News</router-link></v-list-item-title>
+                </v-list-item>
+                <v-list-item>
+                  <v-list-item-title><router-link to="/exchanges/">Exchanges</router-link></v-list-item-title>
+                </v-list-item>
+                <v-list-item>
+                  <v-list-item-title><router-link to="/articles/">Articles</router-link></v-list-item-title>
+                </v-list-item>
+                <v-list-item>
+                  <v-list-item-title><router-link to="/faq/">F.A.Q</router-link></v-list-item-title>
+                </v-list-item>
+                <v-list-item>
+                  <v-list-item-title><router-link to="/contacts/">Contacts</router-link></v-list-item-title>
+                </v-list-item>
+
+              </v-list>
+            </v-menu>
+
+        </div>
+
+
+
       </v-container>
 
 
