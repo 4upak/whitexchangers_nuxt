@@ -5,6 +5,7 @@
       v-model="tab"
       bg-color="#f7fafc"
       height="60px"
+      class="leftbar"
     >
       <v-tab value="one">
         <v-icon
