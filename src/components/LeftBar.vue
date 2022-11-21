@@ -1,6 +1,10 @@
-<template>
+<template
+    class="leftbar"
+>
 
-  <v-card>
+  <v-card
+
+  >
     <v-tabs
       v-model="tab"
       bg-color="#f7fafc"
@@ -44,29 +48,21 @@
         <v-window-item value="one">
           <v-row
             class="mt-5">
-            <v-col cols="12" md="6" >
-              <v-card
-                class="mx-auto"
-                max-width="400"
-                outlined
-              >
+            <v-col :cols="cols_num" :md="md" >
+
                 <v-card-title id="from-list">
                   From currency
                 </v-card-title>
                 <from-list />
-              </v-card>
+
             </v-col>
-            <v-col cols="12" md="6" >
-              <v-card
-                  class="mx-auto"
-                  max-width="400"
-                  outlined
-              >
+            <v-col :cols="cols_num" :md="md" >
+
                 <v-card-title id="to-list">
                   To currency
                 </v-card-title>
                 <to-list />
-              </v-card>
+
             </v-col>
           </v-row>
         </v-window-item>
@@ -74,13 +70,13 @@
         <v-window-item value="two">
           <v-row
             class="mt-5">
-            <v-col cols="12" md="6">
+            <v-col :cols="cols_num" :md="md">
               <v-card-title>
                 From currency
               </v-card-title>
               <two-from-list />
             </v-col>
-            <v-col cols="12" md="6">
+            <v-col :cols="cols_num" :md="md">
               <v-card-title>
                 From currency
               </v-card-title>
@@ -115,13 +111,17 @@ export default {
     "two-from-list" : TwoFromList,
     "two-to-list" : TwoToList,
 
+
   },
   data: () => ({
     tab: 'one',
+    "cols_num": 12,
+    "md": 6
   }),
   mounted() {
     this.$store.dispatch('fetchCurrenciesLists')
     this.changeTab()
+    this.changeColNum()
   },
   methods: {
     isMobile() {
@@ -134,6 +134,13 @@ export default {
     changeTab() {
       if(this.isMobile())
         this.tab = 'two'
+    },
+    changeColNum(){
+      if(this.isMobile()){
+        this.cols_num = 6
+        this.md = 3
+      }
+
     }
   }
 }

@@ -12,9 +12,6 @@
       <th class="text-left">
         Get
       </th>
-      <th class="text-left">
-        Reserve
-      </th>
     </tr>
     </thead>
     <tbody>
@@ -27,8 +24,9 @@
         <span class="min"><b>Min:</b> {{item.min}}</span><br>
         <span class="max"><b>Max:</b> {{item.max}}</span>
       </td>
-      <td>{{ item.to_rate}} <span class="to_currency">{{item.to_currency.name}}</span></td>
-      <td>{{ item.reserve}}</td>
+      <td>{{ item.to_rate}} <span class="to_currency">{{item.to_currency.name}}</span>
+        <span class="min">{{ item.reserve}}</span>
+      </td>
     </tr>
     </tbody>
   </v-table>

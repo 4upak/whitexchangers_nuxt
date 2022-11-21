@@ -26,9 +26,6 @@
           <th class="text-left">
             Get
           </th>
-          <th class="text-left">
-            Reserve
-          </th>
         </tr>
         </thead>
         <tbody>
@@ -38,12 +35,14 @@
           :key="item.id"
 
         >
-          <td v-if="item.from_currency_name != item.to_currency_name">{{ item.from_currency_name }} -> {{ item.to_currency_name }}</td>
+          <td v-if="item.from_currency_name != item.to_currency_name">{{ item.from_currency_name }} -><br> {{ item.to_currency_name }}</td>
           <td v-if="item.from_currency_name != item.to_currency_name">{{ item.from_rate}}<br>
             <span class="min"><b>Min:</b> {{item.min}}</span><br><span class="max"><b>Max:</b> {{item.max}}</span>
           </td>
-          <td v-if="item.from_currency_name != item.to_currency_name">{{ item.to_rate}}</td>
-          <td v-if="item.from_currency_name != item.to_currency_name">{{ item.reserve}}</td>
+          <td v-if="item.from_currency_name != item.to_currency_name">
+            {{ item.to_rate}}<br>
+            <span class="min"><b>Reserve:</b> {{ item.reserve}}</span>
+          </td>
         </tr>
 
         </tbody>
