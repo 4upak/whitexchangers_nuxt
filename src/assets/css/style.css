@@ -162,3 +162,15 @@ header .v-tabs{
     color: #282e38;
     margin-bottom: 0px;
 }
+.rate_result_cols_header{
+    background-color: rgb(247, 250, 252);
+    height:60px;
+    line-height:60px;
+}
+.rate_result_cols .v-row div{
+    padding:0px;
+    margin:0px;
+    padding-left:15px;
+    font-weight: 500;
+
+}

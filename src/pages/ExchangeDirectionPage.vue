@@ -14,10 +14,7 @@
       <v-col cols="12" md="7">
         <v-card>
           <v-responsive >
-            <v-card-text>
-
               <rates-table />
-            </v-card-text>
           </v-responsive>
         </v-card>
       </v-col>
