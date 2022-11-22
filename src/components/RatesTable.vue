@@ -69,6 +69,10 @@
                 {{ item.from_rate}} <span class="from_currency">{{item.from_currency.name}}</span> ->
                 {{ item.to_rate}} <span class="to_currency">{{item.to_currency.name}}</span>
               </div>
+              <div>
+                <span class="min"><b>Min:</b> {{item.min}} -> </span>
+                <span class="max"><b>Max:</b> {{item.max}}</span>
+              </div>
               <div class="reserve_mobile_view text-caption">Reserve: {{ item.reserve}} {{item.to_currency.code_name}}</div>
               <v-btn
                   class="mt-2 rate_mobile_button"
