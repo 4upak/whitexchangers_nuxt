@@ -4,7 +4,7 @@
       class="d-flex align-center rate_result_cols"
       v-if="getRatesResult.length > 0"
   >
-    <v-row class="rate_result_cols_header">
+    <v-row class="rate_result_cols_header" v-if="!getMobileCheck">
       <v-col cols="12" md="2">
         Exchange
       </v-col>
@@ -48,7 +48,37 @@
           </v-col>-->
         </v-row>
       </v-col>
-      <v-divider></v-divider>
+      <div class="rate_view_mobile" v-if="getMobileCheck">
+        <v-card
+            class="rate_card_mobile_view"
+        >
+          <v-card-item>
+            <div>
+              <div class="text-h6 mb-1">
+                {{ item.exchange.name }}
+              </div>
+              <div >
+                {{ item.from_rate}} <span class="from_currency">{{item.from_currency.name}}</span> ->
+                {{ item.to_rate}} <span class="to_currency">{{item.to_currency.name}}</span>
+              </div>
+              <div class="reserve_mobile_view text-caption">Reserve: {{ item.reserve}} {{item.to_currency.name}}</div>
+              <v-btn
+                  class="mt-2"
+                  color="blue"
+                  depressed
+                  href="/exchange"
+                  style="float: right; margin-top:-25px !important;"
+              >
+                Button
+              </v-btn>
+            </div>
+          </v-card-item>
+
+        </v-card>
+
+      </div>
+
+      <v-divider v-if="!getMobileCheck"></v-divider>
     </template>
   </div>
   <!--<v-table v-if="getRatesResult.length > 0" id="rates_table">
