@@ -10,6 +10,8 @@
 
   <v-expansion-panels
       v-model="panel"
+      multiple
+      variant="accordion"
   >
     <template
         v-for="(item, i) in getCurrenciesFromLists"
@@ -17,6 +19,7 @@
         <v-expansion-panel
             :key="i"
             v-if="item.active == true"
+            color="primary"
         >
           <v-expansion-panel-title>{{item.name}}</v-expansion-panel-title>
           <v-expansion-panel-text>

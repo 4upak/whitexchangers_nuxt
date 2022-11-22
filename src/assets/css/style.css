@@ -144,7 +144,8 @@ header .v-tabs{
 }
 .leftbar .v-text-field{
     margin:0px;
-    padding:0px
+    padding:0px;
+    margin-bottom: 20px;
 
 }
 .leftbar .v-card-text{
@@ -196,4 +197,7 @@ header .v-tabs{
 .leftbar .v-expansion-panel-text__wrapper{
     padding:0px;
     margin:0px;
+}
+.leftbar .v-expansion-panel--active > .v-expansion-panel-title{
+    min-height: 40px;
 }

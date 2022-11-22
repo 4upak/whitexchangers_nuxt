@@ -11,6 +11,9 @@
 
   <v-expansion-panels
       v-model="panel"
+      multiple
+      variant="accordion"
+
   >
     <template
         v-for="(item, i) in getCurrenciesToLists"
