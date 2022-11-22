@@ -45,15 +45,16 @@
           >
             Login
           </v-btn>
-
-            <v-menu
+          <v-menu
                 transition="slide-y-transition"
+                v-if="getMobileCheck"
             >
 
               <template v-slot:activator="{ props }">
                 <v-btn
                     icon
                     v-bind="props"
+                    if
                 >
                   <v-icon
                       color="blue"
@@ -105,12 +106,16 @@
 </template>
 
 <script>
+import {mapGetters} from "vuex";
 import LogoImg from "@/assets/img/logo.png";
 export default {
   name: "TopNavbar",
   data: () => ({
     logo: LogoImg,
   }),
+  computed: {
+    ...mapGetters(["getMobileCheck"]),
+  },
 };
 
 

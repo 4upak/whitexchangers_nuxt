@@ -54,10 +54,10 @@ const store = createStore({
 
             state.currencies_to_data.find(
                 item => item.tag_currencies.find(
-                    currency => currency.code_name == payload ? state.fromCurrencyName = currency.name : null)
+                    currency => currency.code_name == payload ? state.toCurrencyName = currency.name : null)
             )
             localStorage.setItem('ToCodeSelected', payload);
-            localStorage.setItem('toCurrencyName', state.fromCurrencyName);
+            localStorage.setItem('toCurrencyName', state.toCurrencyName);
 
             if (state.from_code_selected != null && state.to_code_selected != null) {
                 //redirect to exchange direction page
@@ -194,9 +194,11 @@ const store = createStore({
         setFromCurrencyName(state, payload){
             state.commit('setFromCurrencyName', payload)
         },
+
         setToCurrencyName(state, payload){
             state.commit('setToCurrencyName', payload)
         },
+
         setFromCodeNoRedirect(state, payload){
             state.commit('setFromCodeSelectedNoRedirect', payload)
         },

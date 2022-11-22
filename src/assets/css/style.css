@@ -156,3 +156,9 @@ header .v-tabs{
     ovwerflow:hidden;
     font-size: 12px;
 }
+.v-card-title{
+    font-size: 0.8 rem;
+    font-weight: 500;
+    color: #282e38;
+    margin-bottom: 0px;
+}

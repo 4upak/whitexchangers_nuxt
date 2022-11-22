@@ -55,6 +55,7 @@
                   density="comfortable"
                   type="success"
                   variant="tonal"
+                  v-if="getFromCurrencyName"
               >
                 {{getFromCurrencyName}}
               </v-alert>
@@ -66,6 +67,7 @@
                   density="comfortable"
                   type="success"
                   variant="tonal"
+                  v-if="getToCurrencyName"
               >
                 {{getToCurrencyName}}
               </v-alert>
@@ -83,6 +85,7 @@
                   density="comfortable"
                   type="success"
                   variant="tonal"
+                  v-if="getFromCurrencyName"
               >
                 {{getFromCurrencyName}}
               </v-alert>
@@ -93,6 +96,7 @@
                   density="comfortable"
                   type="success"
                   variant="tonal"
+                  v-if="getToCurrencyName"
               >
                 {{getToCurrencyName}}
               </v-alert>

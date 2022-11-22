@@ -20,6 +20,13 @@ and (-webkit-min-device-pixel-ratio: 2) {
     .leftbar{
         boder:solid 1px #000;
     }
+    .leftbar .v-list-item--density-compact.v-list-item--one-line{
+        min-height: 20px;
+        font-size: 12px;
+    }
+    .leftbar .v-list-item-title{
+        font-size: 10px;
+    }
 
 }
 
