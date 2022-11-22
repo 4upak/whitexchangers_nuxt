@@ -7,6 +7,9 @@ h1 {
 span.blue_span{
     color: #4070f4;
 }
+h1.text-center{
+    color:#282e38 !important;
+}
 .top_toolbar-container{
     max-width: 1400px;
     margin-left: auto;
