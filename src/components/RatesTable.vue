@@ -19,26 +19,25 @@
       v-for="item in getRatesResult"
       :key="item.id"
     >
-      <td>{{ item.exchange.name }}</td>
-      <td>{{ item.from_rate}} <br><span class="from_currency">{{item.from_currency.name}}</span><br>
-        <span class="min"><b>Min:</b> {{item.min}}</span><br>
-        <span class="max"><b>Max:</b> {{item.max}}</span>
-      </td>
-      <td>
-        {{ item.to_rate}} <br><span class="to_currency">{{item.to_currency.name}}</span>
-        <br>
-        <span class="min"><b>Reserve:</b>{{ item.reserve}}</span>
-        <br>
-        <v-btn
+      <td class="unit_name">
+        {{ item.exchange.name }}
+        <!--<v-btn
             color="white"
             prepend-icon="mdi-cloud-upload"
             width="120"
-            height="30"
+            height="25"
             class="change_click_button"
         >
           Exchange
-        </v-btn>
-
+        </v-btn>-->
+      </td>
+      <td class="give">{{ item.from_rate}} <span class="from_currency">{{item.from_currency.name}}</span><br>
+        <!--<span class="min"><b>Min:</b> {{item.min}}</span> |
+        <span class="max"><b>Max:</b> {{item.max}}</span>-->
+      </td>
+      <td class="get">
+        {{ item.to_rate}}<span class="to_currency">{{item.to_currency.name}}</span>
+        <!--<span class="min"><b>Reserve:</b>{{ item.reserve}}</span>-->
       </td>
     </tr>
     </tbody>

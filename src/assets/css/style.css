@@ -119,6 +119,20 @@ header .v-tabs{
     margin-top:5px;
     margin-bottom:5px
 }
-td{
+#rates_table td{
     vertical-align: top;
+    font-size: 14px;
+}
+#rates_table td span{
+    font-weight: 400;
+}
+#rates_table td.unit_name{
+    width:80px !important;
+
+}
+#rates_table td.give{
+    width:40% !important;
+}
+#rates_table td.get{
+    width:40% !important;
 }
