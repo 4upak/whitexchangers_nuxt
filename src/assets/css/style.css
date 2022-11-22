@@ -181,5 +181,15 @@ header .v-tabs{
 
 }
 .rate_view_mobile{
-    margin-top:10px
+}
+.rate_mobile_button{
+    font-size: 12px;
+    opacity: 0.8;
+    float: right; margin-top:-28px !important;
+    height:20px !important;
+    height:30px !important;
+}
+.review_count{
+    float: right;
+    font-size:12px;
 }

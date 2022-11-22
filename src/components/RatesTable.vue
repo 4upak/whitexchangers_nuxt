@@ -54,6 +54,14 @@
         >
           <v-card-item>
             <div>
+              <div class="review_count">
+                Reviews:
+                <v-badge
+                  color="info"
+                  content="12"
+                  inline
+              ></v-badge>
+              </div>
               <div class="text-h6 mb-1">
                 {{ item.exchange.name }}
               </div>
@@ -61,21 +69,20 @@
                 {{ item.from_rate}} <span class="from_currency">{{item.from_currency.name}}</span> ->
                 {{ item.to_rate}} <span class="to_currency">{{item.to_currency.name}}</span>
               </div>
-              <div class="reserve_mobile_view text-caption">Reserve: {{ item.reserve}} {{item.to_currency.name}}</div>
+              <div class="reserve_mobile_view text-caption">Reserve: {{ item.reserve}} {{item.to_currency.code_name}}</div>
               <v-btn
-                  class="mt-2"
-                  color="blue"
-                  depressed
-                  href="/exchange"
-                  style="float: right; margin-top:-25px !important;"
+                  class="mt-2 rate_mobile_button"
+                  color="success"
+                  href="/rate/+item.id"
+                  style="margin-top:-25px !important;"
               >
-                Button
+                Exchange
               </v-btn>
             </div>
           </v-card-item>
 
         </v-card>
-
+        <div style="margin-top: 10px"></div>
       </div>
 
       <v-divider v-if="!getMobileCheck"></v-divider>
