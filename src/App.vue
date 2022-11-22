@@ -32,8 +32,8 @@ export default {
   },
   mounted() {
     this.$store.dispatch('setMobile', this.isMobile())
-    this.$store.dispatch('setFromCurrencyName',localStorage.getItem('fromCurrencyName'))
-    this.$store.dispatch('setToCurrencyName',localStorage.getItem('toCurrencyName'))
+
+
 
   },
   computed: {

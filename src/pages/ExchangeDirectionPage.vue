@@ -56,6 +56,12 @@ export default {
       from_code: this.from_direction,
       to_code: this.to_direction,
     })
+
+    this.$store.dispatch('setFromCurrencyName',localStorage.getItem('fromCurrencyName'))
+    this.$store.dispatch('setToCurrencyName',localStorage.getItem('toCurrencyName'))
+
+    this.$store.dispatch('setFromCodeNoRedirect',localStorage.getItem('FromCodeSelected'))
+    this.$store.dispatch('setToCodeNoRedirect',localStorage.getItem('ToCodeSelected'))
   },
   computed: {
     ...mapGetters([

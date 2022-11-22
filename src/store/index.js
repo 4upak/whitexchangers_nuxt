@@ -142,6 +142,12 @@ const store = createStore({
         },
         setToCurrencyName(state, payload){
             state.toCurrencyName = payload
+        },
+        setFromCodeSelectedNoRedirect(state, payload){
+            state.from_code_selected = payload
+        },
+        setToCodeSelectedNoRedirect(state, payload){
+            state.to_code_selected = payload
         }
 
     },
@@ -190,7 +196,13 @@ const store = createStore({
         },
         setToCurrencyName(state, payload){
             state.commit('setToCurrencyName', payload)
-        }
+        },
+        setFromCodeNoRedirect(state, payload){
+            state.commit('setFromCodeSelectedNoRedirect', payload)
+        },
+        setToCodeNoRedirect(state, payload){
+            state.commit('setToCodeSelectedNoRedirect', payload)
+        },
     },
     getters:{
         getCurrenciesFromLists(state){
