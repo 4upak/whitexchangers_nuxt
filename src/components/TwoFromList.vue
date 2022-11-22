@@ -1,6 +1,6 @@
 <template>
   <v-text-field
-    label="To currency"
+    label="From currency"
     v-model="FromSearchItem"
     @input="searchFrom"
 

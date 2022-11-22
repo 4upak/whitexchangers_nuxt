@@ -77,7 +77,7 @@
               <v-btn
                   class="mt-2 rate_mobile_button"
                   color="success"
-                  href="/rate/+item.id"
+                  :href="item.url"
                   style="margin-top:-25px !important;"
               >
                 Exchange
