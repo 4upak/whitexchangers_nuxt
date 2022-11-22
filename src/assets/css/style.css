@@ -136,3 +136,15 @@ header .v-tabs{
 #rates_table td.get{
     width:40% !important;
 }
+.leftbar .v-input__details{
+    display: none;
+}
+.leftbar .v-text-field{
+    margin:0px;
+    padding:0px
+
+}
+.leftbar .v-card-text{
+    padding:0px;
+    margin:0px;
+}

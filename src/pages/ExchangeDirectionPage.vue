@@ -2,7 +2,7 @@
 
   <v-container class="lighten-5">
     <!-- title -->
-    <h1 class="text-center">{{from_direction}} - {{to_direction}}</h1>
+    <h1 class="text-center">Exchange {{getFromCurrencyName}} to {{getToCurrencyName}}</h1>
     <!-- 3 rows of articles -->
     <v-row
       class="mt-5"
@@ -34,6 +34,7 @@
 
 import LeftBar  from "@/components/LeftBar";
 import RatesTable from "@/components/RatesTable";
+import { mapGetters } from "vuex";
 
 export default {
   name: "MainPage",
@@ -55,6 +56,11 @@ export default {
       from_code: this.from_direction,
       to_code: this.to_direction,
     })
+  },
+  computed: {
+    ...mapGetters([
+      'getFromCurrencyName','getToCurrencyName'
+    ]),
   },
 
 

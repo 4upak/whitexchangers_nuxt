@@ -3,7 +3,8 @@
 >
 <div class="leftbar">
   <v-card
-
+      class="leftbar_card"
+      elevation="0"
   >
     <v-tabs
       v-model="tab"
@@ -43,25 +44,17 @@
         Popular
       </v-tab>
     </v-tabs>
-
     <v-card-text>
+
       <v-window v-model="tab">
         <v-window-item value="one">
           <v-row
             class="mt-5">
             <v-col :cols="cols_num" :md="md" >
-
-                <v-card-title id="from-list">
-                  Give
-                </v-card-title>
                 <from-list />
 
             </v-col>
             <v-col :cols="cols_num" :md="md" >
-
-                <v-card-title id="to-list">
-                  Get
-                </v-card-title>
                 <to-list />
 
             </v-col>
@@ -72,15 +65,9 @@
           <v-row
             class="mt-5">
             <v-col :cols="cols_num" :md="md">
-              <v-card-title>
-                Give
-              </v-card-title>
               <two-from-list />
             </v-col>
             <v-col :cols="cols_num" :md="md">
-              <v-card-title>
-                Get
-              </v-card-title>
               <two-to-list />
             </v-col>
           </v-row>
@@ -92,7 +79,6 @@
       </v-window>
     </v-card-text>
   </v-card>
-
 </div>
 </template>
 
@@ -102,6 +88,7 @@ import ToList from "@/components/ToList";
 
 import TwoFromList from "@/components/TwoFromList";
 import TwoToList from "@/components/TwoToList";
+import {mapGetters} from "vuex";
 
 
 export default {
@@ -123,21 +110,21 @@ export default {
     this.$store.dispatch('fetchCurrenciesLists')
     this.changeTab()
     this.changeColNum()
+    console.log("LocalStorage:" + localStorage.getItem('FromCodeSelected'))
+    console.log("LocalStorage:" + localStorage.getItem('ToCodeSelected'))
+  },
+  computed: {
+    ...mapGetters(["getMobileCheck"]),
   },
   methods: {
-    isMobile() {
-      if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-        return true
-      } else {
-        return false
-      }
-    },
     changeTab() {
-      if(this.isMobile())
+      console.log('Mobile check:' + this.getMobileCheck)
+      if(this.getMobileCheck)
         this.tab = 'two'
+
     },
     changeColNum(){
-      if(this.isMobile()){
+      if(this.getMobileCheck){
         this.cols_num = 6
         this.md = 3
       }

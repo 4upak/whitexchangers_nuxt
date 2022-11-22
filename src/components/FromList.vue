@@ -14,9 +14,6 @@
         :key="i"
         v-if="getCurrenciesFromLists.length > 0 && item.active == true"
     >
-
-
-
       <v-card-title
           class="tag_title"
       >
@@ -34,7 +31,7 @@
             @click="this.setFromCode(currency.code_name); scrollTo()"
             v-if = "currency.active == true"
 
-            :class="{ 'v-list-item--active': currency.code_name == fromSelectedItem }"
+            :class="{ 'v-list-item--active': currency.code_name == this.$route.params.from_code }"
 
           >
             <v-list-item-title>
@@ -44,7 +41,6 @@
           </v-list-item>
         </template>
       </v-list>
-
     </div>
 
   </template>
@@ -77,9 +73,7 @@ export default {
     scrollTo() {
       document.getElementById("to-list").scrollIntoView( { behavior: "smooth",  } );
     },
-
   },
-
 }
 </script>
 

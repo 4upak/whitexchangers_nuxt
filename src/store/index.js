@@ -11,6 +11,10 @@ const store = createStore({
         top_exchangers: [],
         from_code_selected: null,
         to_code_selected: null,
+        fromCurrencyName: null,
+        toCurrencyName: null,
+        isMobile: false,
+
     },
     mutations: {
         setCurrenciesLists(state, payloads){
@@ -27,6 +31,17 @@ const store = createStore({
         setFromCodeSelected(state, payload){
             state.from_code_selected = payload
             console.log('setFromCodeSelected', payload)
+
+
+            state.currencies_from_data.find(
+                item => item.tag_currencies.find(
+                    currency => currency.code_name == payload ? state.fromCurrencyName = currency.name : null)
+            )
+            localStorage.setItem('FromCodeSelected', payload);
+            localStorage.setItem('fromCurrencyName', state.fromCurrencyName);
+
+
+
             if (state.from_code_selected != null && state.to_code_selected != null) {
                 //redirect to exchange direction page
                 window.location.href = '/rate/' + state.from_code_selected + '/' + state.to_code_selected + '/'
@@ -36,6 +51,14 @@ const store = createStore({
         setToCodeSelected(state, payload){
             state.to_code_selected = payload
             console.log('setToCodeSelected', payload)
+
+            state.currencies_to_data.find(
+                item => item.tag_currencies.find(
+                    currency => currency.code_name == payload ? state.fromCurrencyName = currency.name : null)
+            )
+            localStorage.setItem('ToCodeSelected', payload);
+            localStorage.setItem('toCurrencyName', state.fromCurrencyName);
+
             if (state.from_code_selected != null && state.to_code_selected != null) {
                 //redirect to exchange direction page
                 window.location.href = '/rate/' + state.from_code_selected + '/' + state.to_code_selected + '/'
@@ -109,6 +132,16 @@ const store = createStore({
             }
 
 
+        },
+
+        setMobile(state, payload){
+            state.isMobile = payload
+        },
+        setFromCurrencyName(state, payload){
+            state.fromCurrencyName = payload
+        },
+        setToCurrencyName(state, payload){
+            state.toCurrencyName = payload
         }
 
     },
@@ -145,8 +178,19 @@ const store = createStore({
         searchTo(state, payload){
             console.log('searchTo', payload)
             state.commit('searchingTo', payload)
-        }
+        },
+        setMobile(state, payload){
+            console.log('setMobile', payload)
 
+            state.commit('setMobile', payload)
+        },
+
+        setFromCurrencyName(state, payload){
+            state.commit('setFromCurrencyName', payload)
+        },
+        setToCurrencyName(state, payload){
+            state.commit('setToCurrencyName', payload)
+        }
     },
     getters:{
         getCurrenciesFromLists(state){
@@ -160,6 +204,15 @@ const store = createStore({
         },
         getTopExchangers(state){
             return state.top_exchangers
+        },
+        getMobileCheck(state){
+            return state.isMobile
+        },
+        getFromCurrencyName(state) {
+            return state.fromCurrencyName
+        },
+        getToCurrencyName(state) {
+            return state.toCurrencyName
         }
     },
 
