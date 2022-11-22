@@ -151,3 +151,8 @@ header .v-tabs{
     padding:0px;
     margin:0px;
 }
+.leftbar .v-alert{
+    height:50px;
+    ovwerflow:hidden;
+    font-size: 12px;
+}

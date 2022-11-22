@@ -51,10 +51,24 @@
           <v-row
             class="mt-5">
             <v-col :cols="cols_num" :md="md" >
+              <v-alert
+                  density="comfortable"
+                  type="success"
+                  variant="tonal"
+              >
+                {{getFromCurrencyName}}
+              </v-alert>
                 <from-list />
 
             </v-col>
             <v-col :cols="cols_num" :md="md" >
+              <v-alert
+                  density="comfortable"
+                  type="success"
+                  variant="tonal"
+              >
+                {{getToCurrencyName}}
+              </v-alert>
                 <to-list />
 
             </v-col>
@@ -65,12 +79,28 @@
           <v-row
             class="mt-5">
             <v-col :cols="cols_num" :md="md">
+              <v-alert
+                  density="comfortable"
+                  type="success"
+                  variant="tonal"
+              >
+                {{getFromCurrencyName}}
+              </v-alert>
               <two-from-list />
             </v-col>
             <v-col :cols="cols_num" :md="md">
+              <v-alert
+                  density="comfortable"
+                  type="success"
+                  variant="tonal"
+              >
+                {{getToCurrencyName}}
+              </v-alert>
               <two-to-list />
             </v-col>
           </v-row>
+
+
         </v-window-item>
 
         <v-window-item value="three">
@@ -114,7 +144,7 @@ export default {
     console.log("LocalStorage:" + localStorage.getItem('ToCodeSelected'))
   },
   computed: {
-    ...mapGetters(["getMobileCheck"]),
+    ...mapGetters(["getMobileCheck", "getFromCurrencyName", "getToCurrencyName"]),
   },
   methods: {
     changeTab() {

@@ -48,6 +48,7 @@ export default {
   },
   mounted() {
     this.$store.dispatch('fetchCurrenciesLists')
+    localStorage.clear()
   }
 
 }
