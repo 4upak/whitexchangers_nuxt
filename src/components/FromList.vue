@@ -1,12 +1,59 @@
 <template>
   <v-text-field
-    label="Give currency"
-    v-model="FromSearchItem"
-    @input="searchFrom"
-    id="from-list"
+      label="Give currency"
+      v-model="FromSearchItem"
+      @input="searchFrom"
+      id="from-list"
   >
 
   </v-text-field>
+
+  <v-expansion-panels
+      v-model="panel"
+  >
+    <template
+        v-for="(item, i) in getCurrenciesFromLists"
+    >
+        <v-expansion-panel
+            :key="i"
+            v-if="item.active == true"
+        >
+          <v-expansion-panel-title>{{item.name}}</v-expansion-panel-title>
+          <v-expansion-panel-text>
+            <div
+                :key="i"
+                v-if="getCurrenciesFromLists.length > 0 && item.active == true"
+            >
+              <v-list
+                  density="compact"
+              >
+                <template v-for="(currency, j) in item.tag_currencies">
+                  <v-list-item
+                      :key="j"
+                      :value="currency"
+                      active-color="primary"
+                      @click="this.setFromCode(currency.code_name); scrollTo()"
+                      v-if = "currency.active == true"
+
+                      :class="{ 'v-list-item--active': currency.code_name == this.$route.params.from_code }"
+
+                  >
+                    <v-list-item-title>
+                      {{ currency.name }}
+                    </v-list-item-title>
+
+                  </v-list-item>
+                </template>
+              </v-list>
+            </div>
+          </v-expansion-panel-text>
+
+        </v-expansion-panel>
+    </template>
+  </v-expansion-panels>
+
+
+  <!--
   <template
     v-for="(item, i) in getCurrenciesFromLists"
   >
@@ -44,10 +91,7 @@
     </div>
 
   </template>
-
-
-
-
+-->
 
 
 </template>
@@ -60,6 +104,7 @@ export default {
   data: () => ({
     fromSelectedItem: 0,
     FromSearchItem: "",
+    panel: [0, 1,2,3,4,5,6],
   }),
 
   computed: {

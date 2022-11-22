@@ -49,7 +49,6 @@
                 transition="slide-y-transition"
                 v-if="getMobileCheck"
             >
-
               <template v-slot:activator="{ props }">
                 <v-btn
                     icon

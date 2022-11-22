@@ -193,4 +193,7 @@ header .v-tabs{
     float: right;
     font-size:12px;
 }
-
+.leftbar .v-expansion-panel-text__wrapper{
+    padding:0px;
+    margin:0px;
+}
