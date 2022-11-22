@@ -2,7 +2,7 @@
 
   <v-container class="lighten-5">
     <!-- title -->
-    <h1 class="text-center">Exchange <span class="blue_span">{{getFromCurrencyName}}</span> to <span class="blue_span">{{getToCurrencyName}}</span></h1>
+    <h1 class="text-center rates_page_title">Exchange <span class="blue_span">{{getFromCurrencyName}}</span> to <span class="blue_span">{{getToCurrencyName}}</span></h1>
     <!-- 3 rows of articles -->
     <v-row
       class="mt-5"

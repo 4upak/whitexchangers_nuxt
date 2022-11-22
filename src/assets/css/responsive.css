@@ -59,6 +59,9 @@ and (-webkit-min-device-pixel-ratio: 2) {
         margin:0px;
         padding:0px !important;
     }
+    h1.rates_page_title{
+        font-size:22px !important
+    }
 
 
 }
