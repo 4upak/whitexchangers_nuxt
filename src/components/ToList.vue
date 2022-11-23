@@ -13,6 +13,7 @@
       v-model="panel"
       multiple
       variant="accordion"
+      v-if="getCurrenciesToLists.length > 0"
 
   >
     <template
@@ -56,42 +57,12 @@
     </template>
   </v-expansion-panels>
 
-
-  <!--
-  <template
-    v-for="(item, i) in getCurrenciesToLists"
-  >
-    <div
-      :key="i"
-      v-if="getCurrenciesToLists.length > 0 && item.active == true"
-    >
-      <v-card-title
-        class="tag_title"
-      >
-        {{ item.name }}
-      </v-card-title>
-      <v-list
-          density="compact"
-
-      >
-        <template v-for="(currency, j) in item.tag_currencies">
-          <v-list-item
-            :key="j"
-            :value="currency"
-            active-color="primary"
-            @click="this.setToCode(currency.code_name); scrollTo()"
-            v-if = "currency.active == true"
-            :class="{ 'v-list-item--active': currency.code_name == this.$route.params.to_code }"
-          >
-            <v-list-item-title v-text="currency.name"></v-list-item-title>
-          </v-list-item>
-        </template>
-      </v-list>
-
-    </div>
-  </template>
-  -->
-
+  <v-progress-circular
+      indeterminate
+      color="primary"
+      v-else
+      align-center
+  ></v-progress-circular>
 
 
 </template>
