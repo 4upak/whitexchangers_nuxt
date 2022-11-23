@@ -36,9 +36,10 @@
                 <v-list-item
                     :key="j"
                     :value="currency"
-                    active-color="primary"
+                    active-color="green"
                     @click="this.setToCode(currency.code_name); scrollTo()"
                     v-if = "currency.active == true"
+                    rounded="xl"
 
                     :class="{ 'v-list-item--active': currency.code_name == this.$route.params.to_code }"
 
