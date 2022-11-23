@@ -23,7 +23,9 @@
           :key="i"
           v-if="item.active == true"
       >
-        <v-expansion-panel-title>{{item.name}}</v-expansion-panel-title>
+        <v-expansion-panel-title
+            color="blue"
+        >{{item.name}}</v-expansion-panel-title>
         <v-expansion-panel-text>
           <div
               :key="i"
@@ -39,7 +41,6 @@
                     active-color="green"
                     @click="this.setToCode(currency.code_name); scrollTo()"
                     v-if = "currency.active == true"
-                    rounded="xl"
 
                     :class="{ 'v-list-item--active': currency.code_name == this.$route.params.to_code }"
 
