@@ -153,7 +153,7 @@ export default {
   methods: {
     changeTab() {
       console.log('Mobile check:' + this.getMobileCheck)
-      if(this.getMobileCheck)
+      if(this.getMobileCheck && localStorage.getItem('FromCodeSelected') && localStorage.getItem('ToCodeSelected'))
         this.tab = 'two'
 
     },
